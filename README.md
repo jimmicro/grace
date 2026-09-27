@@ -2,6 +2,8 @@
 
 Grace is a comprehensive Go library for graceful startup and shutdown of services. It provides both low-level utilities for building services and high-level orchestration for managing multiple services.
 
+[![Check](https://github.com/jimmicro/grace/actions/workflows/check.yaml/badge.svg)](https://github.com/jimmicro/grace/actions/workflows/check.yaml)
+
 ## Features
 
 ### Core Components
@@ -351,6 +353,13 @@ grace/
    var wg grace.GraceWaitGroup
    wg.Go(func() { /* work */ }) // Cleaner than wg.Add(1) + defer wg.Done()
    ```
+
+## Development
+
+```bash
+golangci-lint run ./...
+go test ./...
+```
 
 ## Contributing
 
